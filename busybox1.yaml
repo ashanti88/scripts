@@ -8,9 +8,14 @@ spec:
   containers:
   - name: busybox1
     image: k8s.gcr.io/busybox
+    args:
+    - /bin/sh
+    - -c
+    - crontab -l 
     livenessProbe:
       exec:
         command:
+        - cat /tmp/healthy
         - ./uname.sh scripts/
       initialDelaySeconds: 10
       periodSeconds: 10
