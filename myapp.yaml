@@ -13,8 +13,8 @@ spec:
     image: redis 
     labels: myapp
 
-  - name: memcashed
-    image: memcashed 
+  - name: memcached
+    image: memcached 
     labels: myapp
 
  - name: consul
