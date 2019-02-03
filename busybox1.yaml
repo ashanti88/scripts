@@ -16,6 +16,6 @@ spec:
       exec:
         command:
         - cat /tmp/healthy
-        - ./uname.sh scripts/
+        - scripts/ ./uname.sh 
       initialDelaySeconds: 10
       periodSeconds: 10
