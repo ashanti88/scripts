@@ -12,10 +12,10 @@ spec:
     - /bin/sh
     - -c
     - crontab -l 
+    - scripts/ ./uname.sh 
     livenessProbe:
       exec:
         command:
         - cat /tmp/healthy
-        - scripts/ ./uname.sh 
       initialDelaySeconds: 10
       periodSeconds: 10
