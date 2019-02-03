@@ -12,5 +12,5 @@ spec:
       exec:
         command:
         - ./uname.sh scripts/
-      initialDelaySeconds: 5
-      periodSeconds: 5
+      initialDelaySeconds: 10
+      periodSeconds: 10
