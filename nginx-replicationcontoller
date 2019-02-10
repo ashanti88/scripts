@@ -18,4 +18,5 @@ spec:
         ports:
         - containerPort: 80
 
-#  kubectl expose -f nginx-rs.yaml --type=NodePort --port=80 --name=nginx-svc
+#  to expose NodePort service run cmd: 
+# kubectl expose -f nginx-rs.yaml --type=NodePort --port=80 --name=nginx-svc
