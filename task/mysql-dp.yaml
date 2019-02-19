@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: 2019-02-19T18:47:27Z
+  generation: 1
+  labels:
+    run: myqsl-dp
+  name: myqsl-dp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:latest
+        ports:
+        - containerPort: 80
+    volumeMounts:
+    - name: secret-cred 
+      mountPath: "secret-cred"
+      readOnly: true
+    volumes:
+    - name: secred-cred   
+      secret:
+        secretName: secret-cred
